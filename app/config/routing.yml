@@ -1,5 +1,7 @@
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+chdtu_user:
+    resource: "@ChdtuUserBundle/Resources/config/routing.yml"
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
