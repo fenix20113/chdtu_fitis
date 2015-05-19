@@ -1,0 +1,19 @@
+{
+  "name": "chdtu_fitis",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fenix20113/chdtu_fitis",
+  "authors": [
+    "Yura <ypalii2012@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}
