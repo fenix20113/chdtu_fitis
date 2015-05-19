@@ -8,22 +8,14 @@
 {% block title 'Chdtu Bundle' %}
 
 {% block body %}
-    {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
-        </div>
-    {% endfor %}
 
-    {% block content_header %}
-
-
-        <div style="clear: both"></div>
-    {% endblock %}
+    {% include 'ChdtuMainBundle::header.html.twig' %}
 
     <div class="block">
         {% block content %}{% endblock %}
     </div>
 
+    {% include 'ChdtuMainBundle::footer.html.twig' %}
     {% if code is defined %}
         <h2>Code behind this page</h2>
         <div class="block">
