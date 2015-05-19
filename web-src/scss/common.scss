@@ -1,2 +1,10 @@
 @import "../../web/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../web/bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "user_list";
+
+
+a {
+    .glyphicon {
+        margin-right: 7px;
+    }
+}
