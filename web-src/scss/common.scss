@@ -1,6 +1,11 @@
 @import "../../web/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../web/bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "user_list";
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+    src: url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
 
 
 a {
