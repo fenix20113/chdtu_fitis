@@ -1,0 +1,30 @@
+group:
+    path:     /
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:index" }
+
+group_show:
+    path:     /{id}/show
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:show" }
+
+group_new:
+    path:     /new
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:new" }
+
+group_create:
+    path:     /create
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:create" }
+    methods:  POST
+
+group_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:edit" }
+
+group_update:
+    path:     /{id}/update
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:update" }
+    methods:  [POST, PUT]
+
+group_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ChdtuUserBundle:ChdtuGroup:delete" }
+    methods:  [POST, DELETE]

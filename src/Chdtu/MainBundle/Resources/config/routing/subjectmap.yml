@@ -1,0 +1,30 @@
+subjectmap:
+    path:     /
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:index" }
+
+subjectmap_show:
+    path:     /{id}/show
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:show" }
+
+subjectmap_new:
+    path:     /new
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:new" }
+
+subjectmap_create:
+    path:     /create
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:create" }
+    methods:  POST
+
+subjectmap_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:edit" }
+
+subjectmap_update:
+    path:     /{id}/update
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:update" }
+    methods:  [POST, PUT]
+
+subjectmap_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ChdtuMainBundle:SubjectMap:delete" }
+    methods:  [POST, DELETE]

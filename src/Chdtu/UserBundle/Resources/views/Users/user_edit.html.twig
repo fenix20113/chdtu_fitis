@@ -1,0 +1,25 @@
+{% extends "ChdtuMainBundle::layout.html.twig" %}
+{% set new = form.vars.value.id ? false : true %}
+{% set actionUrl = new ? path('_user_create') : path('_user_edit', {user_id: form.vars.value.id }) %}
+
+{% block content %}
+    <div class="col-lg-12">
+        <div class="col-sm-2"></div>
+        {% if not new %}
+            <div class="col-sm-10"><h1 class="title">{{ 'chdtu.edit.user.form.title'|trans|capitalize }}</h1></div>
+        {% else %}
+            <div class="col-sm-10"><h1 class="title">{{ 'chdtu.create.user.form.title'|trans|capitalize }}</h1></div>
+        {% endif %}
+        <form novalidate role="form" class="form-horizontal" action="{{ actionUrl }}" {{ form_enctype(form) }}
+              method="POST">
+            {{ form_widget(form) }}
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <input class="btn btn-default " type="submit" value="{{ 'chdtu.user.submit'|trans }}"/>
+
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

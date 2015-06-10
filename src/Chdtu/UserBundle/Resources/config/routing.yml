@@ -1,3 +1,25 @@
+chdtu_user_group:
+    resource: "@ChdtuUserBundle/Resources/config/routing/chdtugroup.yml"
+    prefix:   /group
+
 _user_list:
     path:     /users
     defaults: { _controller: ChdtuUserBundle:User:userList }
+
+_user_create:
+    path:     /user/create
+    defaults: { _controller: ChdtuUserBundle:User:create }
+
+_user_edit:
+    path:     /user/{user_id}/edit
+    defaults: { _controller: ChdtuUserBundle:User:edit }
+
+_user_delete:
+    path:     /user/{user_id}/delete
+    defaults: { _controller: ChdtuUserBundle:User:remove }
+
+#_group_create:
+#    path:     /group/create
+#    defaults: { _controller: ChdtuUserBundle:Group:create }
+
+

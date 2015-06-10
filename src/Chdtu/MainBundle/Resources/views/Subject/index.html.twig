@@ -1,0 +1,40 @@
+{% extends "ChdtuMainBundle::layout.html.twig" %}
+
+{% block content -%}
+    <h1>Subject list</h1>
+
+    <ul class="actions-list pull-right">
+        <li>
+            <a href="{{ path('subject_new') }}">
+               Новий предмет
+            </a>
+        </li>
+    </ul>
+
+    <table class="records_list table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('subject_show', { 'id': entity.id }) }}">{{ entity.name }}</a></td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('subject_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('subject_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

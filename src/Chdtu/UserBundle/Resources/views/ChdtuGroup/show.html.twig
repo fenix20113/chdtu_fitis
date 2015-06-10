@@ -1,0 +1,26 @@
+{% extends "ChdtuMainBundle::layout.html.twig" %}
+
+{% block content -%}
+    <ul>
+        <li>
+            <h1>{{ entity.groupName }}</h1>
+        </li>
+        <li>
+            <a href="{{ path('group') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('group_edit', { 'id': entity.id }) }}">
+                Edit
+            </a>
+        </li>
+    </ul>
+
+
+    {% include 'ChdtuUserBundle:Users:user_list_table.html.twig' %}
+
+    <ul class="record_actions">
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+{% endblock %}

@@ -1,6 +1,8 @@
 @import "../../web/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../web/bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
-@import "user_list";
+@import "user";
+@import "subject";
+@import "group";
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url("../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
@@ -11,5 +13,12 @@
 a {
     .glyphicon {
         margin-right: 7px;
+    }
+}
+
+ul.actions-list {
+    li {
+        float: left;
+        display: block;
     }
 }

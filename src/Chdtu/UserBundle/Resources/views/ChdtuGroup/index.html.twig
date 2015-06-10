@@ -1,0 +1,37 @@
+{% extends "ChdtuMainBundle::layout.html.twig" %}
+
+{% block content -%}
+    <h1>ChdtuGroup list</h1>
+
+    <ul>
+        <li>
+
+            <a href="{{ path('group_new') }}" class="btn btn-default pull-right">
+                <span class="glyphicon glyphicon-plus"></span>Нова група
+            </a>
+        </li>
+    </ul>
+    <table class="records_list table table-striped">
+        <thead>
+        <tr>
+            <th>Група</th>
+            <th colspan="2">Дії</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('group_show', { 'id': entity.id }) }}">{{ entity.groupName }}</a></td>
+                <td width="65">
+                    <a href="{{ path('group_edit', {id: entity.id}) }}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span>Edit</a>
+                </td>
+                <td width="65">
+                    <a onclick="return confirm('{{ 'chdtu.confirm.delete' | trans }}')"
+                       href="{{ path('group_delete', {id: entity.id}) }}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+subject:
+    path:     /
+    defaults: { _controller: "ChdtuMainBundle:Subject:index" }
+
+subject_show:
+    path:     /{id}/show
+    defaults: { _controller: "ChdtuMainBundle:Subject:show" }
+
+subject_new:
+    path:     /new
+    defaults: { _controller: "ChdtuMainBundle:Subject:new" }
+
+subject_create:
+    path:     /create
+    defaults: { _controller: "ChdtuMainBundle:Subject:create" }
+    methods:  POST
+
+subject_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ChdtuMainBundle:Subject:edit" }
+
+subject_update:
+    path:     /{id}/update
+    defaults: { _controller: "ChdtuMainBundle:Subject:update" }
+    methods:  [POST, PUT]
+
+subject_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ChdtuMainBundle:Subject:delete" }
+    methods:  [POST, DELETE]

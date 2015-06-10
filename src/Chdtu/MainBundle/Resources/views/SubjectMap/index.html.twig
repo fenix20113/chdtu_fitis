@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>SubjectMap list</h1>
+
+    <table class=" table records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Student</th>
+                <th>Subject</th>
+                <th>Mark</th>
+                <th>Teacher</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('subjectmap_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.student.fullName }}</td>
+                <td>{{ entity.subject.name }}</td>
+                <td>{{ entity.mark }}</td>
+                <td>{{ entity.teacher.fullName }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('subjectmap_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('subjectmap_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('subjectmap_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

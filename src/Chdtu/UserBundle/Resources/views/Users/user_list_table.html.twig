@@ -1,0 +1,46 @@
+<div class="user-list">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>{{ 'chdtu.last.name'|trans }}</th>
+            <th>{{ 'chdtu.first.name'|trans }}</th>
+            <th>{{ 'chdtu.middle.name'|trans }}</th>
+            <th>{{ 'chdtu.username'|trans }}</th>
+            <th>{{ 'chdtu.email'|trans }}</th>
+            <th>{{ 'chdtu.mobile'|trans }}</th>
+            <th>{{ 'chdtu.roles'|trans }}</th>
+            <th colspan="2">{{ 'chdtu.actions'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.middleName }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.mobile }}</td>
+                <td>
+                    <ul>
+                        {% for role in user.roles %}
+                            <li>{{ role }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td width="65">
+                    <a href="{{ path('_user_edit', {user_id: user.id}) }}" class="btn btn-default"><span
+                                class="glyphicon glyphicon-edit"></span>Edit</a>
+                </td>
+                <td width="65">
+                    <a onclick="return confirm('{{ 'chdtu.confirm.delete' | trans }}')"
+                       href="{{ path('_user_delete', {user_id: user.id}) }}" class="btn btn-danger"><span
+                                class="glyphicon glyphicon-remove"></span>Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+

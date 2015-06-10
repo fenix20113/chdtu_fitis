@@ -1,0 +1,15 @@
+chdtu_main_subjectmap:
+    resource: "@ChdtuMainBundle/Resources/config/routing/subjectmap.yml"
+    prefix:   /subjectmap
+
+chdtu_main_subject:
+    resource: "@ChdtuMainBundle/Resources/config/routing/subject.yml"
+    prefix:   /subject
+
+_chdtu_main:
+    path:     /
+    defaults: { _controller: ChdtuMainBundle:Main:index }
+
+# _chdtu:
+#    path:     /subjects
+#    defaults: { _controller: ChdtuMainBundle:Main:index }
